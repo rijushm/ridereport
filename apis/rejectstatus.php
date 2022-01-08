@@ -1,5 +1,6 @@
 <?php
 include '../assets/php/utils.php';
+include '../assets/php/deviceId.php';
 include '../assets/db/conn.php';
 if (isset($_GET['name']) && isset($_GET['uid']) && isset($_GET['employee'])){
 	$name = $_GET['name'];
@@ -17,6 +18,10 @@ if (isset($_GET['name']) && isset($_GET['uid']) && isset($_GET['employee'])){
 				$upquery = "update `requests` set `status` = 'rejected', `updateTime` = '$uptime' where `uid` = '$uid' and `employee` = '$email'";
 				$upres = mysqli_query($conn, $upquery);
 				if ($upres) {
+					if (deviceId($conn, $email) != false) {
+						$deviceId = deviceId($conn, $email);
+						include '../assets/views/sendrejectnotice.php';
+					}
 					include '../assets/views/status/reject.php';
 				}else{
 					include '../assets/views/error/error.php';

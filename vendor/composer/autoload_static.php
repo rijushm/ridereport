@@ -4,9 +4,13 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit2cc5fe66645c519a01f9f79d8a60a9e3
+class ComposerStaticInitcc6811b0704057243af731921856c262
 {
     public static $files = array (
+        '7b11c4dc42b3b3023073cb14e519683c' => __DIR__ . '/..' . '/ralouphie/getallheaders/src/getallheaders.php',
+        'c964ee0ededf28c96ebd9db5099ef910' => __DIR__ . '/..' . '/guzzlehttp/promises/src/functions_include.php',
+        '6e3fae29631ef280660b3cdad06f25a8' => __DIR__ . '/..' . '/symfony/deprecation-contracts/function.php',
+        '37a3dc5111fe8f707ab4c132ef1dbc62' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/functions_include.php',
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
         '2cffec82183ee1cea088009cef9a6fc3' => __DIR__ . '/..' . '/ezyang/htmlpurifier/library/HTMLPurifier.composer.php',
         'def43f6c87e4f8dfd0c9e1b1bab14fe8' => __DIR__ . '/..' . '/symfony/polyfill-iconv/bootstrap.php',
@@ -24,6 +28,7 @@ class ComposerStaticInit2cc5fe66645c519a01f9f79d8a60a9e3
         ),
         'P' => 
         array (
+            'Pusher\\PushNotifications\\' => 25,
             'Psr\\SimpleCache\\' => 16,
             'Psr\\Http\\Message\\' => 17,
             'Psr\\Http\\Client\\' => 16,
@@ -33,6 +38,16 @@ class ComposerStaticInit2cc5fe66645c519a01f9f79d8a60a9e3
         array (
             'MyCLabs\\Enum\\' => 13,
             'Matrix\\' => 7,
+        ),
+        'G' => 
+        array (
+            'GuzzleHttp\\Psr7\\' => 16,
+            'GuzzleHttp\\Promise\\' => 19,
+            'GuzzleHttp\\' => 11,
+        ),
+        'F' => 
+        array (
+            'Firebase\\JWT\\' => 13,
         ),
         'C' => 
         array (
@@ -52,6 +67,10 @@ class ComposerStaticInit2cc5fe66645c519a01f9f79d8a60a9e3
         'Symfony\\Polyfill\\Iconv\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-iconv',
+        ),
+        'Pusher\\PushNotifications\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/pusher/pusher-push-notifications/src',
         ),
         'Psr\\SimpleCache\\' => 
         array (
@@ -78,6 +97,22 @@ class ComposerStaticInit2cc5fe66645c519a01f9f79d8a60a9e3
         array (
             0 => __DIR__ . '/..' . '/markbaker/matrix/classes/src',
         ),
+        'GuzzleHttp\\Psr7\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/guzzlehttp/psr7/src',
+        ),
+        'GuzzleHttp\\Promise\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/guzzlehttp/promises/src',
+        ),
+        'GuzzleHttp\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/guzzlehttp/guzzle/src',
+        ),
+        'Firebase\\JWT\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/firebase/php-jwt/src',
+        ),
         'Complex\\' => 
         array (
             0 => __DIR__ . '/..' . '/markbaker/complex/classes/src',
@@ -101,10 +136,10 @@ class ComposerStaticInit2cc5fe66645c519a01f9f79d8a60a9e3
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit2cc5fe66645c519a01f9f79d8a60a9e3::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit2cc5fe66645c519a01f9f79d8a60a9e3::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInit2cc5fe66645c519a01f9f79d8a60a9e3::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInit2cc5fe66645c519a01f9f79d8a60a9e3::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInitcc6811b0704057243af731921856c262::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInitcc6811b0704057243af731921856c262::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInitcc6811b0704057243af731921856c262::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInitcc6811b0704057243af731921856c262::$classMap;
 
         }, null, ClassLoader::class);
     }

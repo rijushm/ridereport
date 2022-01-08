@@ -19,6 +19,7 @@ if (isset($_POST['pickup']) && isset($_POST['destination']) && isset($_POST['typ
 		if ($res) {
 			//echo "Request has been sent succesfuly";
 			include '../assets/php/reqmailer.php';
+			include '../assets/php/reqnotification.php';
 			if ($send_email) {
 				header("Location: ".$domain."/request?info=sent");
 			}else{
