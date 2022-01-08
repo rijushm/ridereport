@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Roboto', sans-serif;
+}
+:root{
+	--yellow: #f7dd25;
+	--yellow-alt: #fbca18;
+	--primary: #e67e22;
+	--red: #e30613;
+	--dark: #000;
+	--success: #27ae60;
+	--warning: #d63031;
+}
+.btn-l{
+	padding: 1rem;
+	width: 100%;
+	outline: none;
+	transition: 0.6s;
+	font-weight: 600;
+	text-transform: uppercase;
+	border-radius: 0.75rem;
+	letter-spacing: 1px;
+}
+.btn-dark{
+	background: var(--dark);
+	color: #fff;
+	border: 2px solid var(--dark);
+}
+.btn-primary{
+	background: var(--primary);
+	color: #fff;
+	border: 2px solid var(--primary);
+}
+.bg-warning{
+	background: var(--warning);
+}
+.bg-success{
+	background: var(--success);
+}
+.relative{
+	position: relative;
+}
+.alrtMsg{
+	position: absolute;
+	top: -100%;
+	left: 0;
+	width: 100%;
+	transition: 1.2s;
+	animation: slow-down 1s forwards;
+	animation-delay: 0.3s;
+}
+
+/* Inputs */
+input[type="radio"]:checked + label{
+	background: #000;
+	color: #fff;
+}
+
+@keyframes slow-down{
+	to{
+		top: 0px;
+	}
+}
